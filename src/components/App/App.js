@@ -10,6 +10,7 @@ import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import Books from '../Book/Books'
 import Book from '../Book/Book'
+import CreateBook from '../Book/CreateBook'
 
 class App extends Component {
   constructor () {
@@ -61,6 +62,9 @@ class App extends Component {
           )} />
           <Route exact path='/books/:id' render={(props) => (
             <Book {...props} alert={this.alert} user={user} />
+          )} />
+          <Route exact path='/create-book' render={(props) => (
+            <CreateBook {...props} alert={this.alert} user={user} />
           )} />
         </main>
       </Fragment>
