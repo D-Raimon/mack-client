@@ -11,7 +11,7 @@ const EditBook = (props) => {
 
   useEffect(() => {
     axios(`${apiUrl}/books/${props.match.params.id}`)
-      .then(res => setBook(res.data.show))
+      .then(res => setBook(res.data.book))
       .catch()
   })
 
