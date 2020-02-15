@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
@@ -58,17 +58,19 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword alert={this.alert} user={user} />
           )} />
-          <Route exact path='/books' render={() => (
-            <Books alert={this.alert} user={user} />
-          )} />
-          <Route exact path='/books/:id' render={(props) => (
-            <Book {...props} alert={this.alert} user={user} />
-          )} />
+          <Switch>
+            <Route path="/books/:id/edit" render={(props) => (
+              <EditBook {...props} alert={this.alert} user={user} />
+            )} />
+            <Route exact path='/books/:id' render={(props) => (
+              <Book {...props} alert={this.alert} user={user} />
+            )} />
+            <Route exact path='/books' render={() => (
+              <Books alert={this.alert} user={user} />
+            )} />
+          </Switch>
           <Route exact path='/create-book' render={(props) => (
             <CreateBook {...props} alert={this.alert} user={user} />
-          )} />
-          <Route exact path="/books/:id/edit" render={(props) => (
-            <EditBook {...props} alert={this.alert} user={user} />
           )} />
         </main>
       </Fragment>

@@ -13,7 +13,7 @@ const EditBook = (props) => {
     axios(`${apiUrl}/books/${props.match.params.id}`)
       .then(res => setBook(res.data.book))
       .catch()
-  })
+  }, [])
 
   const handleChange = event => {
     event.persist()
