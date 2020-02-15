@@ -11,6 +11,7 @@ import ChangePassword from '../ChangePassword/ChangePassword'
 import Books from '../Book/Books'
 import Book from '../Book/Book'
 import CreateBook from '../Book/CreateBook'
+import EditBook from '../Book/EditBook'
 
 class App extends Component {
   constructor () {
@@ -65,6 +66,9 @@ class App extends Component {
           )} />
           <Route exact path='/create-book' render={(props) => (
             <CreateBook {...props} alert={this.alert} user={user} />
+          )} />
+          <Route exact path="/books/:id/edit" render={(props) => (
+            <EditBook {...props} alert={this.alert} user={user} />
           )} />
         </main>
       </Fragment>
