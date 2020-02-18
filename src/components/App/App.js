@@ -12,6 +12,7 @@ import Books from '../Book/Books'
 import Book from '../Book/Book'
 import CreateBook from '../Book/CreateBook'
 import EditBook from '../Book/EditBook'
+import Home from '../Home/Home'
 
 class App extends Component {
   constructor () {
@@ -46,6 +47,9 @@ class App extends Component {
           />
         ))}
         <main className="container">
+          <Route exact path='/' render={() => (
+            <Home user={user}/>
+          )} />
           <Route path='/sign-up' render={() => (
             <SignUp alert={this.alert} setUser={this.setUser} />
           )} />
