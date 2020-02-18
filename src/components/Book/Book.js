@@ -36,12 +36,12 @@ const Book = (props) => {
 
   return (
     <Fragment>
-      <div>
+      <div className='mt-4'>
+        <img style={{ float: 'left ' }} className='mr-4' src={book.picture}/>
         <h1>{book.title}</h1>
-        <ul>
-          <li>Thumbnail link: {book.picture}</li>
-          <li>Link to read: {book.website}</li>
-          <li>Current chapter: {book.chapter}</li>
+        <ul className='ml-1' >
+          <li><a target='_blank' rel='noopener noreferrer' href={book.website}>Continue Reading</a></li>
+          <li>Current Chapter: {book.chapter}</li>
           <li>Synopsis: {book.description}</li>
         </ul>
       </div>
