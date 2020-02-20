@@ -9,16 +9,27 @@ const Books = (props) => {
 
   useEffect(() => {
     axios(`${apiUrl}/books`)
-      .then(res => setBooks(res.data.books))
+      .then((res) => {
+        const books = res.data.books
+        const myBooks = []
+        books.forEach((book) => {
+          if (book.owner === props.user._id) {
+            myBooks.push(book)
+          }
+        })
+        setBooks(myBooks)
+      })
+      .catch()
   }, [])
 
   if (!books[0]) return <h1>Loading...</h1>
 
-  if (!books) return <div>Add some of your current storis to get started.</div>
+  if (!books) return <div>Add some of your current stories to get started.</div>
 
   return (
     <div>
       <div>
+        {console.log(books)}
         {books.map(book =>
           <li key={book._id}>
             <Link to={`/books/${book._id}`}>{book.title}</Link>
