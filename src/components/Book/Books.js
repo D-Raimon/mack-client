@@ -29,7 +29,6 @@ const Books = (props) => {
   return (
     <div>
       <div>
-        {console.log(books)}
         {books.map(book =>
           <li key={book._id}>
             <Link to={`/books/${book._id}`}>{book.title}</Link>
