@@ -1,9 +1,12 @@
 import React, { Fragment } from 'react'
+import './home.scss'
 
 const Home = () => {
   return (
     <Fragment>
-      <h1>Welcome to Mack, the manga tracking app!</h1>
+      <div className="background">
+        <div className="welcome_message">Welcome to Mack, the manga tracking app!</div>
+      </div>
     </Fragment>
   )
 }
