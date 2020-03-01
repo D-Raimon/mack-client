@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link, Redirect } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import apiUrl from '../../apiConfig'
+import './book.scss'
 
 const Book = (props) => {
   const [book, setBook] = useState(null)
@@ -36,19 +37,23 @@ const Book = (props) => {
 
   return (
     <Fragment>
-      <div className='mt-4'>
-        <img style={{ float: 'left ' }} className='mr-4' src={book.picture}/>
-        <h1>{book.title}</h1>
-        <ul className='ml-1' >
-          <li><a target='_blank' rel='noopener noreferrer' href={book.website}>Continue Reading</a></li>
-          <li>Current Chapter: {book.chapter}</li>
-          <li>Synopsis: {book.description}</li>
-        </ul>
+      <div className='book_primary'>
+        <img className='book_img' src={book.picture}/>
+        <div className='book_secondary'>
+          <h1>{book.title}</h1>
+          <ul>
+            <li><a target='_blank' rel='noopener noreferrer' href={book.website}>Continue Reading</a></li>
+            <li>Current Chapter: {book.chapter}</li>
+            <li>Synopsis: {book.description}</li>
+          </ul>
+        </div>
       </div>
-      <Link to={`/books/${props.match.params.id}/edit`}>
-        <Button className="mt-1 mr-1 mb-3" size='sm' variant='danger'>Edit</Button>
-      </Link>
-      <Button className="mt-1 mr-1 mb-3" size='sm' variant='danger' onClick={destroy}>Delete</Button>
+      <div className='book_buttons'>
+        <Link to={`/books/${props.match.params.id}/edit`}>
+          <Button size='sm' variant='danger'>Edit</Button>
+        </Link>
+        <Button className="ml-1" size='sm' variant='danger' onClick={destroy}>Delete</Button>
+      </div>
     </Fragment>
   )
 }

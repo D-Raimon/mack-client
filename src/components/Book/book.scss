@@ -1,0 +1,16 @@
+.book_primary {
+  display: flex;
+  margin-top: 4rem;
+}
+.book_img {
+  justify-content: flex-start;
+}
+.book_secondary {
+  justify-content: flex-end;
+  margin-left: 2rem;
+}
+.book_buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
