@@ -6,6 +6,7 @@ import messages from '../AutoDismissAlert/messages'
 
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import './signup.css'
 
 class SignUp extends Component {
   constructor () {
@@ -51,8 +52,8 @@ class SignUp extends Component {
     const { email, password, passwordConfirmation } = this.state
 
     return (
-      <div className="row">
-        <div className="col-sm-10 col-md-8 mx-auto mt-5">
+      <div className="sign_up_primary">
+        <div className="sign_up_secondary col-sm-10 col-md-8 mx-auto mt-5">
           <h3>Sign Up</h3>
           <Form onSubmit={this.onSignUp}>
             <Form.Group controlId="email">

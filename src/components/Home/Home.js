@@ -1,13 +1,11 @@
-import React, { Fragment } from 'react'
-import './home.scss'
+import React from 'react'
+import './home.css'
 
 const Home = () => {
   return (
-    <Fragment>
-      <div className="home_primary">
-        <div className="welcome_message">Welcome to Mack, the manga tracking app!</div>
-      </div>
-    </Fragment>
+    <div className="home_primary">
+      <div className="welcome_message">Welcome to Mack, the manga tracking app!</div>
+    </div>
   )
 }
 
