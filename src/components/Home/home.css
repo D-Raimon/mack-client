@@ -1,0 +1,24 @@
+body {
+  background-image: url(https://images.alphacoders.com/656/656720.jpg);
+  background-size: cover;
+}
+.home_primary {
+  /* background-color: grey; */
+  width: 90%;
+  margin: auto;
+  height: 100vh;
+  opacity: 0.85;
+}
+.welcome_message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: white;
+  width: 100%;
+  background-color:darkblue;
+  text-align: center;
+  margin-top: 180px;
+  padding: 20px 0px 20px 0px;
+  border-radius: 25px;
+}

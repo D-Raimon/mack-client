@@ -1,0 +1,10 @@
+.sign_in_primary{
+  background-color: darkblue;
+  opacity: .85;
+  color: white;
+  border-radius: 25px;
+}
+.sign_in_secondary{
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
