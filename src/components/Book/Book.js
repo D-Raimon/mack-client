@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Link, Redirect } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import apiUrl from '../../apiConfig'
-import './book.scss'
+import './book.css'
 
 const Book = (props) => {
   const [book, setBook] = useState(null)
@@ -39,20 +39,22 @@ const Book = (props) => {
     <Fragment>
       <div className='book_primary'>
         <img className='book_img' src={book.picture}/>
-        <div className='book_secondary'>
-          <h1>{book.title}</h1>
-          <ul>
-            <li><a target='_blank' rel='noopener noreferrer' href={book.website}>Continue Reading</a></li>
-            <li>Current Chapter: {book.chapter}</li>
-            <li>Synopsis: {book.description}</li>
-          </ul>
+        <div className='content-primary'>
+          <div className='book_secondary'>
+            <h1>{book.title}</h1>
+            <ul>
+              <li><a target='_blank' rel='noopener noreferrer' href={book.website}>Continue Reading</a></li>
+              <li>Current Chapter: {book.chapter}</li>
+              <li>Synopsis: {book.description}</li>
+            </ul>
+            <div className='book_buttons'>
+              <Link to={`/books/${props.match.params.id}/edit`}>
+                <Button size='sm' className='mr-2' variant='danger'>Edit</Button>
+              </Link>
+              <Button size='sm' variant='danger' onClick={destroy}>Delete</Button>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className='book_buttons'>
-        <Link to={`/books/${props.match.params.id}/edit`}>
-          <Button size='sm' variant='danger'>Edit</Button>
-        </Link>
-        <Button className="ml-1" size='sm' variant='danger' onClick={destroy}>Delete</Button>
       </div>
     </Fragment>
   )
