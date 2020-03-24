@@ -20,7 +20,7 @@ const unauthenticatedOptions = (
 )
 
 const Header = ({ user }) => (
-  <Navbar bg="primary" variant="dark" expand="md">
+  <Navbar style={{ backgroundColor: '#00008b' }} variant="dark" expand="md">
     <Navbar.Brand href="#">
       Mack
     </Navbar.Brand>
