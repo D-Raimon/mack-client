@@ -24,7 +24,7 @@ https://d-raimon.github.io/mack-client/#/
 https://github.com/D-Raimon/mack-client
 
 #### Deployed Backend:
-https://guarded-anchorage-66706.herokuapp.com/
+https://floating-eyrie-47940.herokuapp.com/
 
 #### Backend Repo:
 https://github.com/D-Raimon/mack-api
