@@ -11,7 +11,7 @@ const BookForm = ({ book, handleSubmit, handleChange }) => {
         <Form.Label>Title</Form.Label>
         <Form.Control
           type='text'
-          placeholder='Solo Leveling'
+          placeholder='ex. Solo Leveling'
           name='title'
           onChange={handleChange}
           value={book.name}
@@ -45,7 +45,7 @@ const BookForm = ({ book, handleSubmit, handleChange }) => {
         <Form.Control
           type='number'
           min='0'
-          placeholder='44'
+          placeholder='ex. 44'
           name='chapter'
           onChange={handleChange}
           value={book.chapter}
@@ -56,7 +56,7 @@ const BookForm = ({ book, handleSubmit, handleChange }) => {
         <Form.Label>Description</Form.Label>
         <Form.Control
           type='text'
-          placeholder='10 years ago, after “the Gate” that...'
+          placeholder='ex. 10 years ago, after “the Gate” that...'
           name='description'
           onChange={handleChange}
           value={book.description}
