@@ -1,5 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { Link } from 'react-router-dom'
+
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 
 import axios from 'axios'
 import apiUrl from '../../apiConfig'
@@ -22,19 +26,26 @@ const Books = (props) => {
       .catch()
   }, [])
 
+  const myBooksJsx = books.map(book => (
+    <Col md="3" className="mb-5" key={book._id}>
+      <h6>{book.name.length > 24 ? book.name.substring(0, 24) + '..' : book.name}</h6>
+      <Link to={`/books/${book._id}`}>
+        <img style={{ height: '300px', width: '210px' }} src={book.url} />
+      </Link>
+    </Col>
+  ))
+
   if (!books[0]) return <h1>Loading...</h1>
 
-  if (!books) return <div>Add some of your current stories to get started.</div>
-
   return (
-    <div>
-      <div>
-        {books.map(book =>
-          <li key={book._id}>
-            <Link to={`/books/${book._id}`}>{book.title}</Link>
-          </li>)}
-      </div>
-    </div>
+    <Fragment>
+      <Container className="mt-4">
+        <Row>
+          {myBooksJsx}
+        </Row>
+      </Container>
+    </Fragment>
+
   )
 }
 
