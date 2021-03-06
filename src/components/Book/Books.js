@@ -28,9 +28,9 @@ const Books = (props) => {
 
   const myBooksJsx = books.map(book => (
     <Col md="3" className="mb-5" key={book._id}>
-      <h6>{book.name.length > 24 ? book.name.substring(0, 24) + '..' : book.name}</h6>
+      <h6>{book.title.length > 24 ? book.title.substring(0, 24) + '..' : book.title}</h6>
       <Link to={`/books/${book._id}`}>
-        <img style={{ height: '300px', width: '210px' }} src={book.url} />
+        <img style={{ height: '300px', width: '210px' }} src={book.picture} />
       </Link>
     </Col>
   ))
