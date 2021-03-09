@@ -1,9 +1,8 @@
 body {
-  background-image: url(https://images.alphacoders.com/656/656720.jpg);
-  background-size: cover;
+  background-color: rgb(36, 36, 36);
 }
+
 .home_primary {
-  /* background-color: grey; */
   width: 90%;
   margin: auto;
   height: 100vh;
