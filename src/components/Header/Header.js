@@ -14,13 +14,12 @@ const authenticatedOptions = (
 
 const unauthenticatedOptions = (
   <Fragment>
-    <Nav.Link href="#sign-up">Sign Up</Nav.Link>
-    <Nav.Link href="#sign-in">Sign In</Nav.Link>
+    <Nav.Link href="#sign-in">Log In</Nav.Link>
   </Fragment>
 )
 
 const Header = ({ user }) => (
-  <Navbar style={{ backgroundColor: '#00008b' }} variant="dark" expand="md">
+  <Navbar style={{ backgroundColor: '#ff6449e7' }} variant="dark" expand="md">
     <Navbar.Brand href="#">
       Mack
     </Navbar.Brand>
