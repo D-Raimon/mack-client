@@ -4,8 +4,9 @@ import { Route, Switch } from 'react-router-dom'
 import AuthenticatedRoute from '../AuthenticatedRoute/AuthenticatedRoute'
 import AutoDismissAlert from '../AutoDismissAlert/AutoDismissAlert'
 import Header from '../Header/Header'
-import SignUp from '../SignUp/SignUp'
-import SignIn from '../SignIn/SignIn'
+// import SignUp from '../SignUp/SignUp'
+// import SignIn from '../SignIn/SignIn'
+import LoginForm from '../LogIn/LogIn'
 import SignOut from '../SignOut/SignOut'
 import ChangePassword from '../ChangePassword/ChangePassword'
 import Books from '../Book/Books'
@@ -50,11 +51,8 @@ class App extends Component {
           <Route exact path='/' render={() => (
             <Home user={user}/>
           )} />
-          <Route path='/sign-up' render={() => (
-            <SignUp alert={this.alert} setUser={this.setUser} />
-          )} />
-          <Route path='/sign-in' render={() => (
-            <SignIn alert={this.alert} setUser={this.setUser} />
+          <Route path='/log-in' render={() => (
+            <LoginForm alert={this.alert} setUser={this.setUser} />
           )} />
           <AuthenticatedRoute user={user} path='/sign-out' render={() => (
             <SignOut alert={this.alert} clearUser={this.clearUser} user={user} />
