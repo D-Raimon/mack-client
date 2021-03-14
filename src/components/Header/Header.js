@@ -14,7 +14,7 @@ const authenticatedOptions = (
 
 const unauthenticatedOptions = (
   <Fragment>
-    <Nav.Link href="#sign-in">Log In</Nav.Link>
+    <Nav.Link href="#log-in">Log In</Nav.Link>
   </Fragment>
 )
 
