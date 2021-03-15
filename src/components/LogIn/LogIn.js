@@ -9,10 +9,10 @@ const LoginForm = ({ setUser, alert }) => {
   return (
     <Accordion defaultActiveKey="0">
       <Card>
-        <Accordion.Toggle as={Card.Header} eventKey="0">
+        <Accordion.Toggle as={Card.Header} eventKey="1">
           New User? Sign Up!
         </Accordion.Toggle>
-        <Accordion.Collapse eventKey="0">
+        <Accordion.Collapse eventKey="1">
           <Card.Body>
             <SignUp
               setUser={setUser}
@@ -22,10 +22,10 @@ const LoginForm = ({ setUser, alert }) => {
         </Accordion.Collapse>
       </Card>
       <Card>
-        <Accordion.Toggle as={Card.Header} eventKey="1">
+        <Accordion.Toggle as={Card.Header} eventKey="0">
           Returning User? Sign In!
         </Accordion.Toggle>
-        <Accordion.Collapse eventKey="1">
+        <Accordion.Collapse eventKey="0">
           <Card.Body>
             <SignIn
               setUser={setUser}
