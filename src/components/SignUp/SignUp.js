@@ -70,9 +70,9 @@ class SignUp extends Component {
               <Form.Label>Password</Form.Label>
               <Form.Control
                 required
+                type="password"
                 name="password"
                 value={password}
-                type="password"
                 placeholder="Password"
                 onChange={this.handleChange}
               />
@@ -89,7 +89,8 @@ class SignUp extends Component {
               />
             </Form.Group>
             <Button
-              variant="primary"
+              style={{ backgroundColor: '#ff6449e7', border: 'none' }}
+              // variant="primary"
               type="submit"
             >
               Submit

@@ -80,7 +80,7 @@ class SignIn extends Component {
                 <small>Please use the sample user for a demo</small>
               </Form.Group>
               <Button
-                variant="primary"
+                style={{ backgroundColor: '#ff6449e7', border: 'none' }}
                 type="submit"
               >
                 Submit
