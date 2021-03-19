@@ -1,7 +1,7 @@
 .book_primary {
   display: flex;
   margin-top: 4rem;
-  background-color: darkblue;
+  background-color: #ff6449e7;
   opacity: .85;
   color: white;
   border-radius: 25px;
