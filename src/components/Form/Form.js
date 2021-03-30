@@ -55,6 +55,8 @@ const BookForm = ({ book, handleSubmit, handleChange }) => {
       <Form.Group controlId='description'>
         <Form.Label>Description</Form.Label>
         <Form.Control
+          as='textarea'
+          rows={3}
           type='text'
           placeholder='ex. 10 years ago, after “the Gate” that...'
           name='description'
