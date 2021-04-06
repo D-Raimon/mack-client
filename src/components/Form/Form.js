@@ -1,57 +1,62 @@
 import React from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import { Col } from 'react-bootstrap'
 
 const BookForm = ({ book, handleSubmit, handleChange }) => {
   const cancelPath = book._id ? `#/books/${book._id}` : '#/books'
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Form.Group controlId='title'>
-        <Form.Label>Title</Form.Label>
-        <Form.Control
-          type='text'
-          placeholder='ex. Solo Leveling'
-          name='title'
-          onChange={handleChange}
-          value={book.name}
-          required
-        />
-      </Form.Group>
-      <Form.Group controlId='picture'>
-        <Form.Label>Thumbnail</Form.Label>
-        <Form.Control
-          type='text'
-          placeholder='URL to thumbnail'
-          name='picture'
-          onChange={handleChange}
-          value={book.picture}
-          required
-        />
-      </Form.Group>
-      <Form.Group controlId='website'>
-        <Form.Label>Website</Form.Label>
-        <Form.Control
-          type='text'
-          placeholder='URL to reading source'
-          name='website'
-          onChange={handleChange}
-          value={book.website}
-          required
-        />
-      </Form.Group>
-      <Form.Group controlId='chapter'>
-        <Form.Label>Current Chapter</Form.Label>
-        <Form.Control
-          type='number'
-          min='0'
-          placeholder='ex. 44'
-          name='chapter'
-          onChange={handleChange}
-          value={book.chapter}
-          required
-        />
-      </Form.Group>
+      <Form.Row>
+        <Form.Group as={Col} controlId='title'>
+          <Form.Label>Title</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='ex. Solo Leveling'
+            name='title'
+            onChange={handleChange}
+            value={book.name}
+            required
+          />
+        </Form.Group>
+        <Form.Group as={Col} controlId='picture'>
+          <Form.Label>Thumbnail</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='URL to thumbnail'
+            name='picture'
+            onChange={handleChange}
+            value={book.picture}
+            required
+          />
+        </Form.Group>
+      </Form.Row>
+      <Form.Row>
+        <Form.Group as={Col} controlId='website'>
+          <Form.Label>Website</Form.Label>
+          <Form.Control
+            type='text'
+            placeholder='URL to reading source'
+            name='website'
+            onChange={handleChange}
+            value={book.website}
+            required
+          />
+        </Form.Group>
+        <Form.Group as={Col} controlId='chapter'>
+          <Form.Label>Current Chapter</Form.Label>
+          <Form.Control
+            type='number'
+            min='0'
+            placeholder='ex. 44'
+            name='chapter'
+            onChange={handleChange}
+            value={book.chapter}
+            required
+          />
+        </Form.Group>
+      </Form.Row>
       <Form.Group controlId='description'>
         <Form.Label>Description</Form.Label>
         <Form.Control
